@@ -1,7 +1,7 @@
 basic.forever(function () {
-    if (input.temperature() > 22) {
-        basic.showString("CALOR!")
-    } else {
-        basic.showString("FRIO!")
+    if (input.lightLevel() > 200) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.UntilDone)
+    } else if (input.lightLevel() < 50) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Funeral), music.PlaybackMode.UntilDone)
     }
 })
